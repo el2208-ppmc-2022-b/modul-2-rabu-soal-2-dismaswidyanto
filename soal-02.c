@@ -11,12 +11,61 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    // Pesan Input
-    printf("Input pesan: ");
+#define len 35
 
-    // Pesan Output
-    float hasil;                                    // Isi nilainya
-    printf("Nilai ketidaksabaran: %.2f", hasil);
-    return 0;
+int main() {
+	/**
+	 * Deklarasi variabel-variabel
+	 */
+	FILE *fp;
+	char namafile[len];
+	char character;
+	int tempResult = 0;
+	int index = 0;
+	int jumlahPBerdekatan = 0;
+	int resultLookUp[6] = {0, 1, 2, 4, 8, 16};
+
+	/**
+	 * Input nama file
+	 */
+	printf("Input pesan: ");
+	scanf("%s", &namafile);
+
+	/**
+	 * Buka file yang diinput
+	 */
+	fp = fopen(namafile, "r");
+
+	/**
+	 * Algoritma utama pemberian nilai
+	 */
+	while(index<5) {
+		character = (char)fgetc(fp);
+		if (character == 'p' || character == 'P'){
+			// Kasus karakter ditemukan, jumlah berdekatan + 1
+			jumlahPBerdekatan++;
+			if (jumlahPBerdekatan > 5) {
+				// Kasus khusus, lebih dari 5 berdekatan sehingga langsung keluar dari program
+				printf("Nilai ketidaksabaran: 1000.00");
+				return 0;
+			}
+		}
+		else {
+			// Kasus karakter tidak ditemukan, nilai langsung ditambah ke hasil dan jumlah berdekatan di reset
+			tempResult += resultLookUp[jumlahPBerdekatan];
+			if (character == '\n') {
+				// End of line ditemukan, indeks ditambahkan
+				index++;
+			}
+			jumlahPBerdekatan = 0;
+		}
+	}
+
+	// Penghitungan Hasil
+	float result = (float)(tempResult)/(float)5;
+
+	// Output hasil
+	printf("Nilai ketidaksabaran: %.2f", result);
+
+	return 0;
 }
