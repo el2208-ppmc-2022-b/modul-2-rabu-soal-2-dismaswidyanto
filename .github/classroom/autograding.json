@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "1",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan1.txt",
+      "output": "Nilai ketidaksabaran: 1.20",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "2",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan2.txt",
+      "output": "Nilai ketidaksabaran: 0.20",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "3",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan3.txt",
+      "output": "Nilai ketidaksabaran: 1000.00",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "4",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan4.txt",
+      "output": "Nilai ketidaksabaran: 4.60",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "5",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan5.txt",
+      "output": "Nilai ketidaksabaran: 4.00",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "6",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan6.txt",
+      "output": "Nilai ketidaksabaran: 0.00",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "7",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan7.txt",
+      "output": "Nilai ketidaksabaran: 1.80",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "8",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan8.txt",
+      "output": "Nilai ketidaksabaran: 1000.00",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "9",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan9.txt",
+      "output": "Nilai ketidaksabaran: 3.20",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "10",
+      "setup": "make soal-02",
+      "run": "./soal-02",
+      "input": "pesan10.txt",
+      "output": "Nilai ketidaksabaran: 1.00",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}
